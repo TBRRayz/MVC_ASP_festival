@@ -1,0 +1,23 @@
+﻿@model IEnumerable<festival.Models.Festival>
+
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Festivals</h2>
+<table class="table table-bordered table-hover">
+<thead>
+<tr>
+    <th>Festival</th>
+</tr>
+</thead>
+<tbody>
+@foreach (var festival in Model)
+{
+    <tr>
+        <td>@festival.Name</td>
+    </tr>
+}
+</tbody>
+</table>
